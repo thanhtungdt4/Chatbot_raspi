@@ -6,18 +6,18 @@
         "chú cuội cung trăng",
         "cây khế",
         "Sơn Tinh Thủy Tinh",
-	    "Tấm Cám",
-	    "Thạch Sanh Lý Thông",
-	    "Cóc Kiện Trời",
-	    "Sọ Dừa",
-	    "Ba Lưỡi Rìu",
-	    "Sự Tích Hoa Đại",
-	    "Cậu Bé Tích Chu",
-	    "Bà Chúa Bèo",
-	    "Sự Tích Hoa Ban",
-	    "Sự Tích Con Bọ Hung",
-	    "Sự Tích Con Muỗi",
-	    "Quả Bầu Tiên"
+	"Tấm Cám",
+	"Thạch Sanh Lý Thông",
+	"Cóc Kiện Trời",
+	"Sọ Dừa",
+	"Ba Lưỡi Rìu",
+	"Sự Tích Hoa Đại",
+	"Cậu Bé Tích Chu",
+	"Bà Chúa Bèo",
+	"Sự Tích Hoa Ban",
+	"Sự Tích Con Bọ Hung",
+	"Sự Tích Con Muỗi",
+	"Quả Bầu Tiên"
     ],
 
     "enter_youtube": [
@@ -30,17 +30,17 @@
 
     "exit_youtube": [
         "thoát youtube",
-	    "dừng youtube",
-	    "exit youtube",
-	    "tắt youtube"
+	"dừng youtube",
+	"exit youtube",
+	"tắt youtube"
     ],
 
     "stop_video": [
         "stop video",
-	    "dừng video",
-	    "thoát video",
-	    "tắt video",
-	    "tắt nhạc"
+	"dừng video",
+	"thoát video",
+	"tắt video",
+	"tắt nhạc"
     ],
 
     "Other": [

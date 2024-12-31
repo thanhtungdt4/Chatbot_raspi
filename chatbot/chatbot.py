@@ -21,7 +21,6 @@ class ChatBot:
     def __init__(self, chatbot_dir="/home/pi/workspace/chatbot"):
         self.chatbot_dir = chatbot_dir
         self.json_file_path = f"{self.chatbot_dir}/data/options.json"
-        self.chatbot_dir = chatbot_dir
         self.recognizer = sr.Recognizer()
         self.conn = self.init_db()
         self.story_options = self.load_options_from_json("story")

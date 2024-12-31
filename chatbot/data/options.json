@@ -1,0 +1,63 @@
+{
+    "story": [
+        "thánh gióng",
+        "cây tre trăm đốt",
+        "sự tích dưa hấu",
+        "chú cuội cung trăng",
+        "cây khế",
+        "Sơn Tinh Thủy Tinh",
+	    "Tấm Cám",
+	    "Thạch Sanh Lý Thông",
+	    "Cóc Kiện Trời",
+	    "Sọ Dừa",
+	    "Ba Lưỡi Rìu",
+	    "Sự Tích Hoa Đại",
+	    "Cậu Bé Tích Chu",
+	    "Bà Chúa Bèo",
+	    "Sự Tích Hoa Ban",
+	    "Sự Tích Con Bọ Hung",
+	    "Sự Tích Con Muỗi",
+	    "Quả Bầu Tiên"
+    ],
+
+    "enter_youtube": [
+        "vào youtube",
+        "phát youtube",
+        "enter youtube",
+        "mở youtube",
+        "youtube"
+    ],
+
+    "exit_youtube": [
+        "thoát youtube",
+	    "dừng youtube",
+	    "exit youtube",
+	    "tắt youtube"
+    ],
+
+    "stop_video": [
+        "stop video",
+	    "dừng video",
+	    "thoát video",
+	    "tắt video",
+	    "tắt nhạc"
+    ],
+
+    "Other": [
+        {"unknown_answer":    "Tôi không biết câu trả lời cho điều đó"},
+        {"unknown_options":   "không có option trong file json"},
+        {"hello":             "xin chào"},
+        {"youtube_hello":     "xin chào, đang ở chế độ youtube, bạn muốn nghe gì"},
+        {"youtube_mode":      "mode, bạn muốn nghe gì"},
+        {"find_video":        "Đã tìm thấy video cho từ khóa"},
+        {"wait_30s":          "đợi 30 giây, tôi sẽ phát ngay"},
+        {"end_video":         "Đã kết thúc phát video"},
+        {"more_video":        "Bạn có muốn nghe thêm gì không?"},
+        {"no_video_found":    "Không tìm thấy video nào cho từ khóa"},
+        {"waiting":           "đợi một chút, tôi đang tìm chuyện"},
+        {"decreased_vol":     "đã giảm âm lượng"},
+        {"not_decreased_vol": "Không thể giảm âm lượng"},
+        {"increased_vol":     "đã tăng âm lượng"},
+        {"not_increased_vol": "Không thể tăng âm lượng"}
+    ]
+}

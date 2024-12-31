@@ -1,0 +1,25 @@
+[Unit]
+Description=Speech Script Service
+After=network.target
+
+[Service]
+Type=simple
+Environment="PULSE_SERVER=unix:/run/user/1000/pulse/native"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+ExecStartPre=/usr/local/bin/wait_for_internet.sh
+ExecStart=/usr/bin/python3 /home/pi/workspace/chatbot/chatbot.py
+WorkingDirectory=/home/pi/workspace/chatbot
+Restart=always
+RestartSec=5  # Wait 5 seconds before restarting
+User=pi
+Group=pi
+CPUWeight=100
+IOSchedulingClass=realtime
+IOSchedulingPriority=0
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=99
+Nice=-10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

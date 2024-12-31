@@ -1,0 +1,6 @@
+1. Copy wait_for_internet.sh to /usr/local/bin/ in raspi
+2. Copy chatbot.service to /etc/systemd/system
+3. enable chatbot.service
+   - sudo systemctl enable chatbot.service
+4. start service
+   - sudo systemctl start chatbot.service

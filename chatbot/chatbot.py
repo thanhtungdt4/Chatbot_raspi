@@ -457,7 +457,7 @@ class ChatBot:
                     if exit_match:
                         self.speak(exit_match)
                         break
-                    if "xin chào" in voice_input:
+                    if self.voice_dict["hello"] in voice_input:
                         self.speak(self.voice_dict["youtube_hello"])
                         continue
                     video_url = self.search_mp4(voice_input)

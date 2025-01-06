@@ -229,10 +229,13 @@ class ChatBot:
         Returns:
             None
         """
-        tts = gTTS(text=text, lang="vi")
-        mp3_file = "/tmp/temp_audio.mp3"
-        tts.save(mp3_file)
-        os.system(f"mpg123 {mp3_file}")
+        try:
+            tts = gTTS(text=text, lang="vi")
+            mp3_file = "/tmp/temp_audio.mp3"
+            tts.save(mp3_file)
+            os.system(f"mpg123 {mp3_file}")
+        except Exception:
+            self.no_internet_speak()
 
     def parse_json_to_dict(self, option):
         """

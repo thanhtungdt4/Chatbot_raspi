@@ -4,6 +4,7 @@ import threading
 import time
 import sqlite3
 import random
+import re
 import os
 import json
 import psutil
@@ -140,22 +141,38 @@ class ChatBot:
 
     def play_video(self, video_url):
         """
-        Streams and plays a video from a given URL using yt-dlp and mpv.
+        Plays the audio of a given YouTube video using yt-dlp and mpv.
+
+        This function extracts the direct audio URL from the YouTube video
+        using `yt-dlp` and then plays it using `mpv` without video.
 
         Args:
-            video_url (str): The URL of the video to be streamed and played.
-
-        Returns:
-            bool: True if the video was played successfully, False otherwise.
+            video_url (str): The URL of the YouTube video.
         """
-        command = (f'yt-dlp -f "bestaudio[abr<=128]" -o - {video_url} | '
-                   f'mpv --demuxer-lavf-o=buffer_size=1000000 -')
         try:
-            subprocess.run(command, shell=True, check=True)
-            return True
+            # Run yt-dlp to get the direct audio URL
+            result = subprocess.run(
+                ["yt-dlp", "-f", "bestaudio", "--get-url", video_url],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+
+            # Extract URL using regex
+            urls = re.findall(r"https?://[^\s]+", result.stdout)
+            if not urls:
+                print("Error: No valid URL found.")
+                self.speak(self.voice_dict["error_video"])
+                return
+
+            audio_url = urls[0]  # Get the first valid URL
+
+            # Play with mpv
+            subprocess.run(["mpv", "--no-video", audio_url])
+
         except subprocess.CalledProcessError as e:
-            print(f"Error occurred while playing the video: {e}")
-            return False
+            print(f"Error running yt-dlp: {e}")
+            self.speak(self.voice_dict["error_video"])
 
     def listen_voice_in_thread(self, running, stop_video_options):
         """
